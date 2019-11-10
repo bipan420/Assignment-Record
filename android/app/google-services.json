@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "763393581383",
+    "firebase_url": "https://assignmentrecordsystem.firebaseio.com",
+    "project_id": "assignmentrecordsystem",
+    "storage_bucket": "assignmentrecordsystem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763393581383:android:861f2205fa9f98148cac62",
+        "android_client_info": {
+          "package_name": "com.example.asignment_record_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763393581383-1k8ge8n1hlve2hdi7dub22567likgdqv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfkMWnoatpaVzsP3Ann-OCtZR3KCuy73M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763393581383-1k8ge8n1hlve2hdi7dub22567likgdqv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "763393581383-c000em8rvm799bo447nfrvhmi131d74o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.asignmentRecordSystem"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
