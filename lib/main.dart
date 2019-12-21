@@ -1,6 +1,7 @@
 import 'package:asignment_record_system/admin_setting.dart';
 import 'package:asignment_record_system/check_assignment.dart';
 import 'package:asignment_record_system/drawer_page.dart';
+import 'package:asignment_record_system/main_admin.dart';
 import 'package:asignment_record_system/sample.dart';
 import 'package:asignment_record_system/student_detail.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,7 @@ class AsignmentSystem extends StatelessWidget {
     return MaterialApp(
       title: 'Material App',
       initialRoute: LoginScreen.id,
+      debugShowCheckedModeBanner: false,
       routes: {
         
         DrawerHome.id:(context) => DrawerHome(),
@@ -31,6 +33,7 @@ class AsignmentSystem extends StatelessWidget {
         CheckAssignment.id : (context) => CheckAssignment(),
         //StudentDetail.id: (context) => StudentDetail()
         Sample.id: (context)=>Sample(),
+        MainAdminPage.id : (context) => MainAdminPage()
       },
     );
   }

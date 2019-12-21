@@ -1,32 +1,31 @@
-import 'package:asignment_record_system/add_teacher.dart';
+import 'package:asignment_record_system/add_student.dart';
 import 'package:asignment_record_system/admin_home.dart';
-//import 'package:asignment_record_system/teacher_detail.dart';
+import 'package:asignment_record_system/student_detail.dart';
 
-//import 'package:asignment_record_system/teacher_detail1.dart' as prefix0;
+//import 'package:asignment_record_system/student_detail1.dart' as prefix0;
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:asignment_record_system/check_assignment.dart';
 
-class Teachers extends StatefulWidget {
-  static final id = 'Teachers';
+class TeacherStudent2 extends StatefulWidget {
+  static final id = 'TeacherStudent2';
 
   @override
-  _TeachersState createState() => _TeachersState();
+  _TeacherStudent2State createState() => _TeacherStudent2State();
 }
 
-class _TeachersState extends State<Teachers> {
+class _TeacherStudent2State extends State<TeacherStudent2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Teachers'),),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: () {
-            //Navigator.pushNamed(context, AddNewteacher.id);
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => AddNewTeacher()));
-          },
-        ),
+        // floatingActionButton: FloatingActionButton(
+        //   child: Icon(Icons.add),
+        //   onPressed: () {
+        //     //Navigator.pushNamed(context, AddNewStudent.id);
+        //     Navigator.push(context,
+        //         MaterialPageRoute(builder: (context) => AddNewStudent()));
+        //   },
+        // ),
         body: SafeArea(
                   child: Container(
             padding: EdgeInsets.symmetric(horizontal: 0, vertical: 10),
@@ -55,7 +54,7 @@ class _TeachersState extends State<Teachers> {
                       width: 110,
                     ),
                     Text(
-                      'Subject',
+                      'View Details',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 20,
@@ -68,7 +67,7 @@ class _TeachersState extends State<Teachers> {
                 ),
                 Expanded(
                   child: StreamBuilder(
-                    stream: Firestore.instance.collection('teachers').snapshots(),
+                    stream: Firestore.instance.collection('student2').snapshots(),
                     builder: (context, snapshot) {
                       if (!snapshot.hasData) {
                         return CircularProgressIndicator();
@@ -76,15 +75,15 @@ class _TeachersState extends State<Teachers> {
                         return ListView.builder(
                           itemCount: snapshot.data.documents.length,
                           itemBuilder: (context, index) {
-                            DocumentSnapshot teacher =
+                            DocumentSnapshot student =
                                 snapshot.data.documents[index];
-                            String roll = teacher['roll'];
-                            String name = teacher['name'];
-                            String address = teacher['address'];
-                            String email = teacher['email'];
-                            String gender = teacher['gender'];
-                            String subject = teacher['subject'];
-                            Timestamp dateOfBirth = teacher['dateOfBirth'];
+                            String roll = student['roll'];
+                            String name = student['name'];
+                            String address = student['address'];
+                            String nextOfKin = student['nextOfKin'];
+                            String gender = student['gender'];
+                            String grade = student['grade'];
+                            Timestamp dateOfBirth = student['dateOfBirth'];
                             return Container(
                               child: Column(
                                 children: <Widget>[
@@ -100,7 +99,7 @@ class _TeachersState extends State<Teachers> {
                                             child: Row(
                                               children: <Widget>[
                                                 Text(
-                                                  '$subject',
+                                                  'View Details',
                                                   style: TextStyle(
                                                       color: Colors.blue,
                                                       fontWeight:
@@ -116,12 +115,13 @@ class _TeachersState extends State<Teachers> {
                                               ],
                                             ),
                                             onPressed: () {
-                                              // teacher_roll = roll;
-                                              // teacher_name = name;
-                                              // teacher_address = address;
-                                              // teacher_dateOfBirth = dateOfBirth;
-                                              // teacher_gender = gender;
-                                              // teacher_nextOfKin = nextOfKin;
+                                              student_roll = roll;
+                                              student_name = name;
+                                              student_grade = grade;
+                                              student_address = address;
+                                              student_dateOfBirth = dateOfBirth;
+                                              student_gender = gender;
+                                              student_nextOfKin = nextOfKin;
 
 
                                               

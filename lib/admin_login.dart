@@ -1,3 +1,5 @@
+import 'package:asignment_record_system/choose_class.dart';
+import 'package:asignment_record_system/main_admin.dart';
 import 'package:asignment_record_system/teachers.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -39,8 +41,8 @@ class _LoginScreenState extends State<LoginScreen> {
    validate(){
     if(formKey.currentState.validate()) {
       formKey.currentState.save();
-      if(_email == 'admin@gmail.com' && _password == 'admin123'){
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> Teachers()));
+      if(_email == 'admin' && _password == 'admin123'){
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> MainAdminPage()));
       }
       loginUser(context,_email,_password);
     }
@@ -57,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
         teacherEmail = email;
         
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => DrawerHome()));
+            context, MaterialPageRoute(builder: (context) => ChooseClassPage()));
         setState(() {
           showSpinner = false;
         });
