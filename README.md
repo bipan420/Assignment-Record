@@ -1,6 +1,6 @@
 # asignment_record_system
 
-A new Flutter project.
+Created using flutter.
 
 ## Getting Started
 
