@@ -1,6 +1,6 @@
 # asignment_record_system
 
-Created using flutter.
+Created using flutter and firebase.
 
 ## Getting Started
 
